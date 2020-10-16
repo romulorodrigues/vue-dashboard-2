@@ -214,10 +214,10 @@
             </div>
             <div class="card">
                 <div class="icon">
-                    <i class="fa fa-smile"></i>
+                    <i class="fa fa-shopping-bag"></i>
                 </div>
                 <div class="num">2000</div>
-                <h3>Users</h3>
+                <h3>Products</h3>
             </div>
         </div>
     </div>
@@ -355,6 +355,13 @@ export default {
     display: block;
 }
 
+@media only screen and (max-width: 768px) {
+    .table{
+        flex: 1 1 100%;
+        overflow-x: scroll;
+    }
+}
+
 .cards{
     flex: 1 1 34%;
     flex-wrap: wrap;
@@ -404,5 +411,17 @@ export default {
     margin-top: 10px;
     font-size: 20px;
     margin-left: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .cards{
+        flex: 1 1 100%;
+    }
+    .card .icon {
+        z-index: 0;
+    }
+    .card .num, .card h3 {
+        z-index: 0;
+    }
 }
 </style>

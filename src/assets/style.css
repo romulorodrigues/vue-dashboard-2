@@ -14,6 +14,13 @@ ul{
     padding: 0;
 }
 
+#app{
+    overflow-x: hidden;
+    height: 100%;
+    position: relative;
+    max-width: 100%;
+}
+
 #main{
     position: relative;
 }

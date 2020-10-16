@@ -5,12 +5,10 @@
                 <img src="../assets/logo.png" alt="">
             </a>
             <div class="nav-mobile">
-                <div class="hamburger" style="display: none;">
-                    <span class="line"></span><span class="line"></span><span class="line"></span>
-                </div>
+                <i class="fa fa-bars" v-on:click="openMenuMobile()"></i>  
             </div>
         </div>
-        <div class="menu">
+        <div class="menu" id="menu">
             <div class="menu-logo">
 				<img src="../assets/about.jpg" alt="">
 			</div>
@@ -37,7 +35,7 @@
                         List
                     </li>
                     <li class="dropdown">
-                        <a href="#" v-on:click="openDropdown()" class="dropbtn">Dropdown <i class="fa fa-angle-down"></i></a>
+                        <a href="#" v-on:click.prevent.stop="openDropdown()" class="dropbtn">Dropdown <i class="fa fa-angle-down"></i></a>
                         <li id="myDropdown" class="dropdown-content">
                             <a href="#">Link 1</a>
                             <a href="#">Link 2</a>
@@ -81,7 +79,7 @@
                 <input type="text" placeholder="Search...">
                 <ul class="options-user">
                     <li>
-                        <a href="#" v-on:click="openDropdownUser()" class="options-user-head"><i class="fa fa-user"></i></a>
+                        <a href="#" v-on:click.prevent.stop="openDropdownUser()" class="options-user-head"><i class="fa fa-user"></i></a>
                         <ul id="myDropdownUser">
                             <li>
                                 <a href=""><i class="fa fa-user"></i> User</a>
@@ -97,7 +95,7 @@
                 </ul>
             </div>
         </div>
-        <div class="sidebar-list">
+        <div class="sidebar-list" id="sidebar">
             <div class="sidebar-list-item">
                 <router-link to="/">
                     <i class="fa fa-home"></i>
@@ -178,6 +176,10 @@ export default {
         openDropdownUser() {
             document.getElementById("myDropdownUser").classList.toggle("show");
         },
+        openMenuMobile(){
+            document.getElementById("menu").classList.toggle("showMenu");
+            document.getElementById("sidebar").classList.toggle("showSidebar");
+        }
     }
 }
 </script>
@@ -203,6 +205,35 @@ export default {
     width: 50px;
     padding: 10px;
     vertical-align: middle;
+}
+
+.nav-mobile{
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav{
+        height: auto;
+    }
+    
+    .nav-mobile{
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        right: -3rem;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 9999;
+        font-size: 1.4rem;
+        padding: 2px 0.5rem 0;
+        border-radius: 2px;
+    }
+
+    .nav-mobile i{
+        font-size: 30px;
+        color: #5CAD8A;
+    }
 }
 
 .menu{
@@ -259,6 +290,17 @@ export default {
     width: 20px;
     height: 20px;
     text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .menu{
+        left: -100%;
+        transition: all 500ms ease-in-out;
+    }
+    .showMenu{
+        left: 5rem;
+    }
+
 }
 
 .header-top{
@@ -359,6 +401,23 @@ export default {
     visibility: visible;
 }
 
+@media only screen and (max-width: 768px) {
+    .header-top-content input[type='text']{
+        display: none;
+    }
+    .header-top-content {
+        padding-left: 0px;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .options-user {
+        margin-top: 22px;
+    }
+}
+
 .sidebar-list{
     position: fixed;
     top: 12%;
@@ -401,6 +460,19 @@ export default {
 
 .sidebar-list-item:hover .tooltip{
     visibility: visible;
+}
+
+@media only screen and (max-width: 768px) {
+    .sidebar-list{
+        left: -100%;
+        transition: all 300ms ease-in-out;
+        background-color: #5CAD8A;
+        height: 100%;
+    }
+    .showSidebar{
+        left: 0%;
+        top: 0;
+    }
 }
 
 .menu-list{
