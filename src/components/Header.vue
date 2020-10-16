@@ -402,19 +402,20 @@ export default {
 }
 
 @media only screen and (max-width: 768px) {
-    .header-top-content input[type='text']{
-        display: none;
+    .header-top-content input[type="text"]{
+        width: 60%;
     }
+
     .header-top-content {
-        padding-left: 0px;
+        padding-left: 132px;
         height: 100%;
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         justify-content: space-between;
-        flex-direction: column;
     }
+    
     .options-user {
-        margin-top: 22px;
+        margin-top: 0px;
     }
 }
 
