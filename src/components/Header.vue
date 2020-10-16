@@ -413,7 +413,7 @@ export default {
         align-items: center;
         justify-content: space-between;
     }
-    
+
     .options-user {
         margin-top: 0px;
     }
@@ -479,7 +479,7 @@ export default {
 .menu-list{
     padding: 15px 25px 0px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    height: calc(100vh - 200px);
+    height: calc(100vh - 280px);
     overflow-y: scroll;
 }
 
