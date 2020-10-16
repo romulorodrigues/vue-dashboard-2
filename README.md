@@ -19,7 +19,7 @@ More details: https://fontawesome.com/v4.7.0/icons/
 
 ## Layout
 
-![alt text](https://atividadeon.com.br/static/img/dashboard-vue.png)
+![alt text](http://romulodevweb.com.br/wp-content/uploads/2020/10/Capturar-1.png)
 
 ## License
 
