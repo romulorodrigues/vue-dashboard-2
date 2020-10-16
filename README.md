@@ -2,7 +2,7 @@
 Responsive dashboard design using Vue.
 
 ## Demo
-[Demo](https://vue-dashboard-omega.vercel.app/#/)
+[Demo](https://vue-dashboard-2.vercel.app/#/)
 
 ## Installation
 - Download the repository as a zip file or make a clone;
