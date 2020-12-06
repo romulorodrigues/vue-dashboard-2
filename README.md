@@ -19,7 +19,7 @@ More details: https://fontawesome.com/v4.7.0/icons/
 
 ## Layout
 
-![alt text](https://romulodevweb.com.br/wp-content/uploads/2020/10/Capturar-1.png)
+![alt text](https://romulodevweb.com.br/wp-content/uploads/2020/10/Capturar-1_152fd04a56a7f2a06298d1fa038610a5.png)
 
 ## License
 
